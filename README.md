@@ -15,3 +15,4 @@ For now a placeholder and container for beta releases. Code (including training)
 ## Current Limitations
 - Denoising strength is fixed to 1
 - Iterations are fixed to 1
+- Only works on mono images
