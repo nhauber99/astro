@@ -3,7 +3,7 @@ ML based astrophotography processing tools.
 For now a placeholder and container for beta releases. Code (including training) will follow.
 
 ## Known Issues
-- In some patches there may be many false posisives for dim stars (especially around star clusters)
+- In some patches there may be many false positives for dim stars (especially around star clusters)
   - *Planned fix: rework the entire star and PSF pipeline*
 - Brightness estimation for stars may be a bit off sometimes
   - *Planned fix: rework the entire star and PSF pipeline*
