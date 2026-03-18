@@ -10,7 +10,7 @@ For now a placeholder and container for beta releases. Code (including training)
 - Blurry diffraction spikes are not deconvolved to a clean line
   - *Planned fix: detect and handle diffraction spikes differently by passing guiding lines in a separate model input*
 - Target PSF has a too tight falloff
-  - *Planned fix: make the profile selectable; so either smoth Airy disk approximation (current) or moffat*
+  - *Planned fix: make the profile selectable; so either smooth Airy disk approximation (current) or moffat*
  
 ## Current Limitations
 - Denoising strength is fixed to 1
