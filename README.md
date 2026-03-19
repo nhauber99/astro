@@ -15,7 +15,7 @@ No GANs or perceptual losses are used, nor will they ever be. The network also d
   - *Planned fix: same as above*
 - Artifacts occasionally appearing for large clipped stars
   - *Planned fix: same as above*
-- "Egg shaped" PSFs cause stars to not be detected.
+- "Egg shaped" PSFs are not correctly handled (not deconvolved to symmetric PSFs) / very long PSFs cause stars to be detected as double stars.
   - *Planned fix: same as above as well as adapting the PSF generation pipeline to be able to generate these*
 - Blurry diffraction spikes are not deconvolved to a clean line
   - *Planned fix: detect and handle diffraction spikes differently by passing guiding lines in a separate model input*
