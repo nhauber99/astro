@@ -1,10 +1,34 @@
 # Hauber-Astro
 ML based astrophotography processing tools.
+
 For now a placeholder and container for beta releases. Code (including training) will follow.
 
-## Optimization Target
-Only pixelwise losses such as MSE or L1 are used throughout the pipeline, along with minor modifications like applying them on multiple scales.
-No GANs or perceptual losses are used, nor will they ever be. The network also does not attempt to estimate a maximum a posteriori instead of the conditional mean / median.
+## Instructions
+
+### Installation
+*For now only Windows is supported. GPU acceleration is used by default if available.*
+
+Add https://photometric.io/pixinsight as PixInsight Respository
+1. Resources -> Updates -> Manage Repositories -> Add
+2. Resources -> Updates -> Check for Updates
+3. Restart PixInsight
+
+### Usage
+**Main Parameters:**
+- **Target Star FWHM:** How large should the resulting stars be?
+- **Denoise Strength:** How much noise should be removed?
+
+**Output Parameters:**
+- **Star Detection:** Choose one of the options to see what the star detection model produces. Has no real value apart from troubleshooting issues. The second combobox specifies whether the values should be kept the same (producing values larger than 1), clamped to [0,1] or be normalized.
+- **PSF Estimation:** Outputs the spatially varying estimated PSF. Could be used by other external tools in the future.
+- **Deconvolution:** This is the main output, by default it replaces the original image or you can choose to create a new one.
+
+**Advanced Parameters:**
+- **Overlap:** Keep default.
+- **Blend:** Keep default.
+- **PSF Samples:** The default will work well, decrease for crops of a larger image, increase if the PSF is varying a lot over the whole image.
+- **Dim Star Rejection:** Sets the threshold for rejecting dim stars the network often hallucinates in the current version. This will be done differently in future versions and is a temporary measure.
+
 
 ## Known Issues
 - In some patches there may be many false positives for dim stars (especially around star clusters)
@@ -30,9 +54,15 @@ No GANs or perceptual losses are used, nor will they ever be. The network also d
  
 If you encounter any new issues, feel free to let me know. If you're willing to send me the source image, it would greatly help me to troubleshoot the issue. Any images you send me would only be used in the test set and not be used in training (it makes sense to keep them out of the training set either way).
  
-## Current Limitations
+### Current Limitations
 - Iterations are fixed to 1
 - Only works on mono images
 
-## Training Data
+## Documentation
+
+### Optimization Target
+Only pixelwise losses such as MSE or L1 are used throughout the pipeline, along with minor modifications like applying them on multiple scales.
+No GANs or perceptual losses are used, nor will they ever be. The network also does not attempt to estimate a maximum a posteriori instead of the conditional mean / median.
+
+### Training Data
 The source dataset consists of a mix of processed images downloaded from different sources (all sources allowed for this with either their terms of service or express written permission from the site owner). These are further processed by removing the stars (via a custom model trained from scratch), then attempting to roughly reverse the nonlinearity followed by aggressive downsampling to get as clean a dataset as possible. Remaining elements, such as stars, blur, and noise, are purely synthetic.
