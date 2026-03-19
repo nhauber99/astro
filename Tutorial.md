@@ -1,25 +1,13 @@
 # How to Use?
 
-## Installation
-*For now only Windows is supported. GPU acceleration is used by default if available.*
-
-Add https://photometric.io/pixinsight as PixInsight Respository
-1. Resources &rarr; Updates &rarr; Manage Repositories &rarr; Add
-2. Resources &rarr; Updates &rarr; Check for Updates
-3. Restart PixInsight
-
-The process can be found under Processes &rarr; Deconvolution &rarr; HauberAstro
-
-## Usage
-
-### Intended Usage
+## Intended Usage
 - **Only use it on linear images.**
 - Use the tool either directly on the stacked result or after background extraction.
 - Do not use it on already denoised images.
 - Do not use it more than once. The iterations parameter does **not** do the same thing as applying it multiple times.
 - **Deviating from this is possible and may even yield visually pleasing results, but this will actively compromise the integrity of your data.**
 
-### Parameters
+## Parameters
 **Main Parameters:**
 - **Target Star FWHM:** How large should the resulting stars be?
 - **Denoise Strength:** How much noise should be removed?
