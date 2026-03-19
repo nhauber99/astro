@@ -3,8 +3,8 @@ ML based astrophotography processing tools.
 For now a placeholder and container for beta releases. Code (including training) will follow.
 
 ## Optimization Target
-Only pixelwise losses like MSE or L1 are used throughout the pipeline, along with minor modifications like applying it on multiple scales.
-No GANs or perceptual losses are or will ever be used. The network also does not attempt to estimate a maximum a posteriori instead of the conditional mean / median.
+Only pixelwise losses such as MSE or L1 are used throughout the pipeline, along with minor modifications like applying them on multiple scales.
+No GANs or perceptual losses are used, nor will they ever be. The network also does not attempt to estimate a maximum a posteriori instead of the conditional mean / median.
 
 ## Known Issues
 - In some patches there may be many false positives for dim stars (especially around star clusters)
@@ -29,4 +29,4 @@ No GANs or perceptual losses are or will ever be used. The network also does not
 - Only works on mono images
 
 ## Training Data
-Source dataset consists of a mix of processed images downloaded from different sources (all sources allowed for this with either their terms of service or expressive written permission from the site owner). These are further processed by removing the stars (via a custom model trained from scratch), then attempting to roughly reverse the nonlinearity followed by agressive downsampling to get as clean of a dataset as possible. The rest like stars, blur and noise is purely synthetic.
+The source dataset consists of a mix of processed images downloaded from different sources (all sources allowed for this with either their terms of service or express written permission from the site owner). These are further processed by removing the stars (via a custom model trained from scratch), then attempting to roughly reverse the nonlinearity followed by aggressive downsampling to get as clean a dataset as possible. Remaining elements, such as stars, blur, and noise, are purely synthetic.
