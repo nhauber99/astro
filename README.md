@@ -1,34 +1,12 @@
 # Hauber-Astro
-ML based astrophotography processing tools.
 
-For now a placeholder and container for beta releases. Code (including training) will follow.
+ML based astrophotography processing tools. See [Tutorial](https://github.com/nhauber99/astro/blob/main/Tutorial.md) for instructions.
 
-## Instructions
+---
 
-### Installation
-*For now only Windows is supported. GPU acceleration is used by default if available.*
+For now this a placeholder and container for alpha / beta releases as well as documentation. Code (including training) will follow.
 
-Add https://photometric.io/pixinsight as PixInsight Respository
-1. Resources -> Updates -> Manage Repositories -> Add
-2. Resources -> Updates -> Check for Updates
-3. Restart PixInsight
-
-### Usage
-**Main Parameters:**
-- **Target Star FWHM:** How large should the resulting stars be?
-- **Denoise Strength:** How much noise should be removed?
-
-**Output Parameters:**
-- **Star Detection:** Choose one of the options to see what the star detection model produces. Has no real value apart from troubleshooting issues. The second combobox specifies whether the values should be kept the same (producing values larger than 1), clamped to [0,1] or be normalized.
-- **PSF Estimation:** Outputs the spatially varying estimated PSF. Could be used by other external tools in the future.
-- **Deconvolution:** This is the main output, by default it replaces the original image or you can choose to create a new one.
-
-**Advanced Parameters:**
-- **Overlap:** Keep default.
-- **Blend:** Keep default.
-- **PSF Samples:** The default will work well, decrease for crops of a larger image, increase if the PSF is varying a lot over the whole image.
-- **Dim Star Rejection:** Sets the threshold for rejecting dim stars the network often hallucinates in the current version. This will be done differently in future versions and is a temporary measure.
-
+**This tool is in early development and an alpha version was released for getting early user feedback. The quality, robustness and stability of the current version is not representative of what I'm aiming for in the long run.**
 
 ## Known Issues
 - In some patches there may be many false positives for dim stars (especially around star clusters)
