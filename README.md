@@ -2,6 +2,10 @@
 ML based astrophotography processing tools.
 For now a placeholder and container for beta releases. Code (including training) will follow.
 
+## Optimization Target
+Only pixelwise losses like MSE or L1 are used throughout the pipeline, along with minor modifications like applying it on multiple scales.
+No GANs or perceptual losses are or will ever be used. The network also does not attempt to estimate a maximum a posteriori instead of the conditional mean / median.
+
 ## Known Issues
 - In some patches there may be many false positives for dim stars (especially around star clusters)
   - *Planned fix: rework the entire star and PSF pipeline*
