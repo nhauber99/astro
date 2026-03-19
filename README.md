@@ -8,6 +8,16 @@ For now this a placeholder and container for alpha / beta releases as well as do
 
 **This tool is in early development and an alpha version was released for getting early user feedback. The quality, robustness and stability of the current version is not representative of what I'm aiming for in the long run.**
 
+## Installation
+*For now only Windows is supported. GPU acceleration is used by default if available.*
+
+Add https://photometric.io/pixinsight as PixInsight Respository
+1. Resources &rarr; Updates &rarr; Manage Repositories &rarr; Add
+2. Resources &rarr; Updates &rarr; Check for Updates
+3. Restart PixInsight
+
+The process can be found under Processes &rarr; Deconvolution &rarr; HauberAstro
+
 ## Known Issues
 - In some patches there may be many false positives for dim stars (especially around star clusters)
   - *Planned fix: rework the entire star and PSF pipeline*
