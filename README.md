@@ -25,7 +25,6 @@ No GANs or perceptual losses are or will ever be used. The network also does not
   - *Planned fix: nothing I can do about it, needs to be fixed in the other tools. Adding TF_FORCE_GPU_ALLOW_GROWTH with value true to the system environment variables improves the issue for the RC Astro tools*
  
 ## Current Limitations
-- Denoising strength is fixed to 1
 - Iterations are fixed to 1
 - Only works on mono images
 
