@@ -24,3 +24,6 @@ For now a placeholder and container for beta releases. Code (including training)
 - Denoising strength is fixed to 1
 - Iterations are fixed to 1
 - Only works on mono images
+
+## Training Data
+Source dataset consists of a mix of processed images downloaded from different sources (all sources allowed for this with either their terms of service or expressive written permission from the site owner). These are further processed by removing the stars (via a custom model trained from scratch), then attempting to roughly reverse the nonlinearity followed by agressive downsampling to get as clean of a dataset as possible. The rest like stars, blur and noise is purely synthetic.
