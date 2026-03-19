@@ -26,6 +26,8 @@ No GANs or perceptual losses are used, nor will they ever be. The network also d
 - Inference is slow after using other ML based tools which use Tensorflow. This is due to Tensorflow reserving close to the entire GPU memory by default and will persist until PixInsight is restarted.
   - *Planned fix: nothing I can do about it, needs to be fixed in the other tools. Adding TF_FORCE_GPU_ALLOW_GROWTH with value true to the system environment variables improves the issue for the RC Astro tools*
  
+If you encounter any new issues, feel free to let me know. If you're willing to send me the source image, it would greatly help me to troubleshoot the issue. Any images you send me would only be used in the test set and not be used in training (it makes sense to keep them out of the training set either way).
+ 
 ## Current Limitations
 - Iterations are fixed to 1
 - Only works on mono images
