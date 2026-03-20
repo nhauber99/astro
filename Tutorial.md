@@ -4,7 +4,7 @@
 - **Only use it on linear images.**
 - Use the tool either directly on the stacked result, after background extraction or after color calibration.
 - Do not use it on already denoised images.
-- Do not use it more than once. The iterations parameter does **not** do the same thing as applying it multiple times.
+- Do not use it more than once.
 - **Deviating from this is possible and may even yield visually pleasing results, but this will actively compromise the integrity of your data.**
 
 ## Parameters
