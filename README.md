@@ -56,3 +56,6 @@ No GANs or perceptual losses are used, nor will they ever be. The network also d
 
 ### Training Data
 The source dataset consists of a mix of processed images downloaded from different sources (all sources allowed for this with either their terms of service or express written permission from the site owner). These are further processed by removing the stars (via a custom model trained from scratch), then attempting to roughly reverse the nonlinearity followed by aggressive downsampling to get as clean a dataset as possible. Remaining elements, such as stars, blur, and noise, are purely synthetic.
+
+### Implementation
+Training was done using pytorch and the PixInsight plugin uses a statically linked version of onnxruntime with DirectML.dll as a provider.
