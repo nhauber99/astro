@@ -1,4 +1,4 @@
-# Hauber-Astro
+# Hauber Astro
 
 ML based astrophotography processing tools. See [Tutorial](https://github.com/nhauber99/astro/blob/main/Tutorial.md) for instructions.
 
@@ -53,6 +53,12 @@ If you encounter any new issues, feel free to let me know. If you're willing to 
 ### Optimization Target
 Only pixelwise losses such as MSE or L1 are used throughout the pipeline, along with minor modifications like applying them on multiple scales.
 No GANs or perceptual losses are used, nor will they ever be. The network also does not attempt to estimate a maximum a posteriori instead of the conditional mean / median.
+
+### Input Data Assumptions
+- Modern CMOS sensors (no charge overflow / bleed)
+- Good calibration (dark frame subtraction, dithering)
+- Images are stacked from many exposures, either normal stacking using Lanczos interpolation, drizzle integration, or prior demosaicing for cameras with a CFA.
+- Refractor telescopes or reflector telescopes with 4 vanes.
 
 ### Training Data
 The source dataset consists of a mix of processed images downloaded from different sources (all sources allowed for this with either their terms of service or express written permission from the site owner). These are further processed by removing the stars (via a custom model trained from scratch), then attempting to roughly reverse the nonlinearity followed by aggressive downsampling to get as clean a dataset as possible. Remaining elements, such as stars, blur, and noise, are purely synthetic.
